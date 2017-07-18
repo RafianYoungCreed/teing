@@ -115,7 +115,8 @@ class MembersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $member=User::find($id);
+        return view('members.edit')->with(compact('member'));
     }
 
     /**
